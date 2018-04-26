@@ -7,7 +7,7 @@ app.use(express.static('./build'))
 const bodyParser = require('body-parser');
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/raffleItems';
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 mongoose.connect(MONGODB_URI).then(
