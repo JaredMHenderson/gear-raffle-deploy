@@ -40,7 +40,7 @@ mongoose.connect(MONGODB_URI).then(
 
 
 app.use(bodyParser.json());
-
+app.use(express.static('./build'));
 
 require('./routes/billing-routes')(app);
 require('./routes/routes')(app);
